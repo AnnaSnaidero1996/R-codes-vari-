@@ -1,0 +1,95 @@
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc0" 
+  slld2011[i,2] <- gsub(rmSpec, "", s) # gsub replace any matches in remSpec and replace them with "".
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xd9" 
+  slld2011[i,2] <- gsub(rmSpec, "Ù", s)  # gsub replace any matches in remSpec and replace them with "".
+  
+}
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc0" 
+  slld2011[i,2] <- gsub(rmSpec, "À", s) # gsub replace any matches in remSpec and replace them with "".
+  
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc8" 
+  slld2011[i,2] <- gsub(rmSpec, "È", s) # gsub replace any matches in remSpec and replace them with "".
+}
+
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xcc" 
+  slld2011[i,2] <- gsub(rmSpec, "Ì", s)   # gsub replace any matches in remSpec and replace them with "".
+  }
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xd2" 
+  slld2011[i,2] <- gsub(rmSpec, "Ò", s)  
+}
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc2" 
+  slld2011[i,2] <- gsub(rmSpec, "Â", s)   
+}
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc9" 
+  slld2011[i,2] <- gsub(rmSpec, "É", s)   
+}
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xca" 
+  slld2011[i,2] <- gsub(rmSpec, "Ê", s)   
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xc7" 
+  slld2011[i,2] <- gsub(rmSpec, "Ç", s)   
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xd4" 
+  slld2011[i,2] <- gsub(rmSpec, "Ô", s)   
+}
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xdf" 
+  slld2011[i,2] <- gsub(rmSpec, "ß", s)   
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xd6" 
+  slld2011[i,2] <- gsub(rmSpec, "Ö", s)   
+}
+
+
+for (i in 1:nrow(slld2011)){
+  s = slld2011[i,2]
+  rmSpec <- "\xdc" 
+  slld2011[i,2] <- gsub(rmSpec, "Ü", s)   
+}
