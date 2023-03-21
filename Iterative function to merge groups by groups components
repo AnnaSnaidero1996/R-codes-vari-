@@ -1,0 +1,40 @@
+
+CheckM<-matrix("joint", nrow= length(vect),ncol = length(vect))
+
+while ("joint" %in% CheckM) {
+for (i in 1:length(vect)){
+  for (j in 1:length(vect)){
+    n<- i
+    m<- j
+    df1<-vect[[n]]
+    df2<-vect[[m]]
+    if 
+    ( identical(sort(df1$uno),sort(df2$uno)) ) {
+      CheckM[m,n] <- "equal"
+    }
+    else if 
+    (isTRUE(!(identical(sort(df1$uno),sort(df2$uno))) && length(intersect(df1$uno,df2$uno)) !=0 ) ) {
+      CheckM[m,n] <- "joint"
+    } 
+    else {
+      CheckM[m,n] <- "noteq"
+    }
+    while (isTRUE(!(identical(sort(vect[[n]]$uno),sort(vect[[m]]$uno))) && length(intersect(vect[[n]]$uno,vect[[m]]$uno)) != 0 )) {
+        vect[[n]] <- as.data.frame(sort(unique(c(df1$uno,df2$uno))))
+        vect[[m]] <- as.data.frame(sort(unique(c(df1$uno,df2$uno))))
+        colnames(vect[[n]])<- "uno"
+        colnames(vect[[m]])<- "uno"
+      } 
+  }}}
+
+  for (i in 1:length(vect)){
+      n<- i
+      df1<-vect[[n]]
+      df1$index <- rep(n, nrow(df1))
+      vect[[n]]<-df1
+      }
+
+Newsll <- dplyr::bind_rows(vect)
+Newsll<-arrange(Newsll, index)
+
+Newsll<-Newsll %>% distinct(uno, .keep_all = T)
